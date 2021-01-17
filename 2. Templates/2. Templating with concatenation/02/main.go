@@ -23,7 +23,7 @@ func main()  {
 			`)
 	nf, err := os.Create("index.html")
 	if err != nil {
-		log.Println(err)
+		log.Fatal(err)
 	}
 	defer nf.Close()
 
