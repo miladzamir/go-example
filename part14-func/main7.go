@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	//ananymos function
+	//anonymous function
 
 	func() {
 		fmt.Println("wow!")
