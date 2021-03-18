@@ -14,7 +14,7 @@ func main() {
 	x := 2
 	fmt.Printf("%d \t %b \n", x, x)
 
-	y := x << 2
+	y := x << 1
 	fmt.Printf("%d \t %b \n", y, y)
 
 	fmt.Println("-/-/-/-/-/-/-/-/-/-/-/-/-/-/-")

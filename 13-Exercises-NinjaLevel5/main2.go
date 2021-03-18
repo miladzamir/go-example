@@ -38,9 +38,11 @@ func main() {
 	for _, v := range m {
 		fmt.Println(v.first, v.last)
 		for _, v2 := range v.favoriteIceCream {
-			fmt.Println(v2)
+			fmt.Println("\t", v2)
 		}
 	}
+
+	fmt.Println("")
 
 	fmt.Println("***=>", p1.first, p1.last)
 	for _, v := range p1.favoriteIceCream {

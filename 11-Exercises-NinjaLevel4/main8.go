@@ -15,9 +15,9 @@ func main() {
 	fmt.Println(x)
 
 	for i, v := range x {
-		fmt.Println("index : ", i)
+		fmt.Println("index:", i)
 		for _, d := range v {
-			fmt.Println(d)
+			fmt.Println("\t ", d)
 		}
 	}
 }
