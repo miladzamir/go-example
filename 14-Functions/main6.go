@@ -14,7 +14,7 @@ type secretAgent struct {
 }
 
 func (s secretAgent) speak(text string) {
-	fmt.Println(s.firstName, s.lastName, "says:", text)
+	fmt.Println(s.person.firstName, s.person.lastName, "says:", text)
 }
 
 func (p person) speak(text string) {
@@ -27,8 +27,15 @@ type human interface {
 }
 
 func bar(h human, text string) {
-	fmt.Println("i called human", h)
-	h.speak(text)
+	switch h.(type) {
+	case person:
+		fmt.Println("person!", h.(person).firstName)
+	case secretAgent:
+		fmt.Println("secretAgent!", h.(secretAgent).ltk)
+	}
+
+	// fmt.Println("i called human \n", h)
+	// h.speak(text)
 }
 
 func main() {
