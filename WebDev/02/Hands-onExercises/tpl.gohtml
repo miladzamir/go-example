@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}
+    {{ .AcaYear }}
+    {{ .Fall.Term}}
+
+    {{range .Fall.Courses}}
+    {{.Number}} {{ .Name }} {{ .Units }}
+    {{end}}
+{{end}}
+
+</body>
+</html>
