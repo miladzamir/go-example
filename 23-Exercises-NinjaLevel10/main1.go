@@ -1,1 +1,0 @@
-package _3_Exercises_NinjaLevel10

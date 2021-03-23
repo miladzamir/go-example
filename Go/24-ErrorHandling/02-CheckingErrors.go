@@ -14,7 +14,7 @@ func main() {
 	//}
 	//fmt.Println(n)
 
-	
+
 	f, err := os.Create("a.txt")
 	if err != nil {
 		fmt.Println(err)
