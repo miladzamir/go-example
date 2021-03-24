@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"log"
 	"net"
 )
@@ -25,6 +26,8 @@ func main() {
 			ln := scanner.Text()
 			fmt.Println(ln)
 		}
-		defer conn.Close()
+
+		io.WriteString(conn, "Connected")
+		conn.Close()
 	}
 }

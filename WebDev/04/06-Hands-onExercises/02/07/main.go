@@ -17,13 +17,24 @@ func main() {
 
 	for {
 		conn, err := li.Accept()
-
-		bufio.NewScanner(conn)
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(conn.RemoteAddr())
-		io.WriteString(conn, "I see you connected \n")
-		conn.Close()
+
+			go handle(conn)
 	}
+}
+func handle(conn net.Conn) {
+	scanner := bufio.NewScanner(conn)
+	for scanner.Scan() {
+		ln := scanner.Text()
+		fmt.Fprintf(conn, "Computer Says: %v \n",  ln)
+		if ln == "" {
+			break
+			fmt.Println("END")
+		}
+	}
+	defer conn.Close()
+
+	io.WriteString(conn,"Connected")
 }
